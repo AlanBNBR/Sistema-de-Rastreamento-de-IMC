@@ -1,0 +1,16 @@
+<?php
+
+session_start();
+
+
+if (isset($_SESSION['usuario_id']) && !empty($_SESSION['usuario_id'])) {
+    
+    header("Location: views/dashboard.php");
+    exit;
+
+} else {
+    
+    header("Location: views/login.php");
+    exit;
+}
+?>
